@@ -1,16 +1,25 @@
-# aptyou
+eduWave-2D-Game is a 2D educational game built with Flutter, designed to help children learn alphabets and words through interactive visuals, audio, and animations. It combines fun and education in an engaging gameplay experience.
 
-A new Flutter project.
+✨ Features
+🎮 Interactive 2D letter-matching game
 
-## Getting Started
+🧠 Designed to improve letter recognition and word learning
 
-This project is a starting point for a Flutter application.
+🔊 Audio feedback to guide and encourage learning
 
-A few resources to get you started if this is your first Flutter project:
+🌐 Dynamic content powered by API (lessons, topics, and images)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+📹 Video-based splash screen with sign-in flow
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🔒 Google Sign-In authentication (using Bloc)
+
+🛠️ Tech Stack
+Flutter for UI & logic
+
+Bloc for state management
+
+Firebase for hosting & auth
+
+AWS S3 for asset delivery (audio & images)
+
+Video Player for splash video intro
