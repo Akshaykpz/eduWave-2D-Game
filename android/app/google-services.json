@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "381618402058",
+    "project_id": "find-the-t-pair-game",
+    "storage_bucket": "find-the-t-pair-game.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381618402058:android:584db14fc6d819db37c0f3",
+        "android_client_info": {
+          "package_name": "com.example.aptyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381618402058-3tpljer24kn5kr1piqt0a908vnv94oie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aptyou",
+            "certificate_hash": "5eb497604d77dc9c14c43c151320ed8b227e0da9"
+          }
+        },
+        {
+          "client_id": "381618402058-p2lstgblheb8ng5q3bcoud728i95ejrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbIN-cUiuGG2oKN_nYvacmKaT_3t1suaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381618402058-p2lstgblheb8ng5q3bcoud728i95ejrj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
