@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:aptyou/logic/home_bloc/home_event.dart'
     show HomeEvent, LoadLessonData;
 import 'package:aptyou/logic/home_bloc/home_state.dart';
@@ -26,6 +28,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }
 
       final dio = Dio();
+      log(token);
       final response = await dio.get(
         'http://13.60.220.96:8000/content/v5/sample-assets',
         options: Options(headers: {'Authorization': 'Bearer $token'}),

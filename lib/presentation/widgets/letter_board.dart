@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:rive/rive.dart' as rive;
 import 'package:aptyou/logic/home_bloc/home_bloc.dart';
 import 'package:aptyou/logic/home_bloc/home_event.dart';
 import 'package:aptyou/presentation/screens/sucess_page.dart';
@@ -80,21 +79,24 @@ class _LetterGameWidgetState extends State<LetterGameWidget> {
 
   void _showLetterToast(
     String message,
-    Color backgroundColor,
-    Color iconColor,
+    String newMessage,
+    Color colors,
     IconData icon,
   ) {
     toastification.show(
       context: context,
-      type: ToastificationType.info,
-      style: ToastificationStyle.flat,
-      title: Text(message, style: const TextStyle(fontWeight: FontWeight.bold)),
+      type: ToastificationType.custom(newMessage, colors, icon),
+      style: ToastificationStyle.fillColored,
+      title: Text(
+        message,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
       alignment: Alignment.topRight,
       autoCloseDuration: const Duration(seconds: 2),
-      icon: Icon(icon, color: iconColor),
-      primaryColor: Colors.orange,
-      backgroundColor: backgroundColor,
-      foregroundColor: Colors.white,
+      backgroundColor: Colors.black87,
       borderRadius: BorderRadius.circular(12),
       showProgressBar: false,
       closeOnClick: true,
@@ -132,8 +134,9 @@ class _LetterGameWidgetState extends State<LetterGameWidget> {
         letterColors[letter] = Colors.green;
         _showLetterToast(
           'Yeah! That is Capital T',
-          Colors.white,
-          const Color(0xFF1B5E20),
+
+          '',
+          const Color.fromARGB(255, 13, 189, 25),
           Icons.check_circle,
         );
         message = "Great! Now find small t.";
@@ -143,8 +146,8 @@ class _LetterGameWidgetState extends State<LetterGameWidget> {
         letterColors[letter] = Colors.green;
         _showLetterToast(
           'Yeah! That is small t',
-          Colors.white,
-          const Color(0xFF1B5E20),
+          '',
+          const Color.fromARGB(255, 13, 189, 25),
           Icons.check_circle,
         );
         _playInstructionAudio(audioSuccess);
@@ -156,12 +159,7 @@ class _LetterGameWidgetState extends State<LetterGameWidget> {
       } else {
         letterColors[letter] = Colors.red;
         message = "Wrong letter. Try again!";
-        _showLetterToast(
-          'Oops! Try again',
-          Colors.orange,
-          Colors.white,
-          Icons.close,
-        );
+        _showLetterToast('Oops! Try again', '', Colors.orange, Icons.close);
         _playInstructionAudio(audioWrongTap);
       }
     });
@@ -174,7 +172,7 @@ class _LetterGameWidgetState extends State<LetterGameWidget> {
         builder:
             (_) => BlocProvider(
               create: (_) => HomeBloc()..add(LoadLessonData()),
-              child: SuccessPage(
+              child: RiveDemo(
                 round: round,
                 isFinalRound: isFinalRound,
                 onNextRound: () {

@@ -79,6 +79,7 @@ flutter:
   assets:
     - assets/en_in_rq_L1_ls2_T5_1-4_round.riv
     - assets/215472_small.mp4
+    - assets/en_in_rq_L1_ls2_T5_final_round (1).riv
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

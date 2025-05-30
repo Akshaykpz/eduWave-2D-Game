@@ -4,9 +4,10 @@ import 'package:aptyou/logic/auth_bloc/auth_bloc.dart';
 import 'package:aptyou/logic/home_bloc/home_bloc.dart';
 import 'package:aptyou/logic/home_bloc/home_event.dart';
 import 'package:aptyou/presentation/screens/home_page.dart';
-import 'package:aptyou/presentation/screens/login_screen.dart';
-import 'package:aptyou/data/api_client.dart'; // <-- your Retrofit client
+
+import 'package:aptyou/data/api_client.dart';
 import 'package:aptyou/presentation/screens/splash_screen.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         home: isLoggedIn ? const HomePage() : const SplashScreen(),
+        // home: RiveDemo(),
       ),
     );
   }

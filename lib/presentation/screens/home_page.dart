@@ -6,8 +6,6 @@ import 'package:aptyou/logic/home_bloc/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-//import 'package:rive/rive.dart' show RiveAnimation;
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
