@@ -34,7 +34,7 @@ class _RiveDemoState extends State<RiveDemo> {
   Future<void> _loadRiveFile() async {
     try {
       final riveUrl =
-          widget.round == 5 
+          widget.round == 5
               ? 'https://apty-read-bucket.s3.us-east-1.amazonaws.com/flutter_app_assets/lesson-2_topic-5/rive/en_in_rq_L1_ls2_T5_final_round.riv'
               : 'https://apty-read-bucket.s3.us-east-1.amazonaws.com/flutter_app_assets/lesson-2_topic-5/rive/en_in_rq_L1_ls2_T5_1-4_round.riv';
 
@@ -45,7 +45,6 @@ class _RiveDemoState extends State<RiveDemo> {
         _isLoading = false;
       });
     } catch (e) {
-      print('Error loading Rive file: $e');
       setState(() {
         _isLoading = false;
       });
@@ -55,7 +54,6 @@ class _RiveDemoState extends State<RiveDemo> {
   void _onRiveInit(Artboard artboard) {
     final stateMachines = artboard.stateMachines;
     if (stateMachines.isEmpty) {
-      print('No state machines found in the Rive file');
       return;
     }
 
@@ -70,7 +68,6 @@ class _RiveDemoState extends State<RiveDemo> {
       stateInput = _controller!.findSMI('T') as SMINumber?;
       if (stateInput != null) {
         stateInput!.value = widget.round.toDouble();
-        print('Initial state set to ${widget.round}');
       }
     }
   }
